@@ -1,0 +1,52 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+# NuGet Packages folder
+packages/
+# paket cache
+*.nupkg
+# paket lock
+package-lock.json
+project.lock.json
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Database / local files
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Anaconda / Python (senin bilgisayarda var gibi gözüküyordu)
+.conda/
+.condarc
+.ipynb_checkpoints/
+__pycache__/
+
+# Others
+*.swp
+*.tmp
+*.bak
