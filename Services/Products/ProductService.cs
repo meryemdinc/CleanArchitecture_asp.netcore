@@ -1,5 +1,6 @@
 ﻿using App.Repositories;
 using App.Repositories.Products;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 namespace App.Services.Products
@@ -64,7 +65,7 @@ namespace App.Services.Products
             product.Stock = request.Stock;
             productRepository.Update(product);
             await unitOfWork.SaveChangesAsync();
-            return ServiceResult.Success();
+            return ServiceResult.Success(HttpStatusCode.NoContent);
         }
 
         public async Task<ServiceResult> DeleteAsync(int id)
@@ -76,9 +77,10 @@ namespace App.Services.Products
             }
             productRepository.Delete(product);
             await unitOfWork.SaveChangesAsync();
-            return ServiceResult.Success();
+            return ServiceResult.Success(HttpStatusCode.NoContent);
         }
 
 
     }
 }
+//httpstatuscode'ları headerda tutup response body'de sadece data veya errormessage tutmak için ServiceResult.cs'te düzenleme yaptık
