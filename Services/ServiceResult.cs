@@ -2,6 +2,8 @@
 
 using System.Net;
 
+using System.Text.Json.Serialization;
+
 namespace App.Services
 {
     public class ServiceResult<T>//<T> ALICAK BAŞARILI OLDUĞUNDA <T> DÖNÜCEK
