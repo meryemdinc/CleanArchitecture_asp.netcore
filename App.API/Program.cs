@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
+using App.Services;
 
 namespace App.API
 {
@@ -16,8 +17,14 @@ namespace App.API
             // Add services to the container.
 
             // Validatorlarını ekle
-          //  builder.Services.AddValidatorsFromAssemblyContaining<Program>();
-            builder.Services.AddControllers();
+            //  builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+            builder.Services.AddControllers(
+                options =>{
+                    options.Filters.Add<FluentValidationFilter>();
+                    options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true; //null kontrolünü .net default olarak yapmasın diye
+
+
+                });
             //.net in default olarak üretmiş olduğu hata mesajlarını kapatıyoruz.Kendi filter'ımızı kendimiz eklicez.
             builder.Services.Configure<ApiBehaviorOptions>(options => options.SuppressModelStateInvalidFilter = true);
 
