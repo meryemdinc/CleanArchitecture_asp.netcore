@@ -1,11 +1,12 @@
 ﻿using App.Repositories;
 using App.Repositories.Products;
+using FluentValidation;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 namespace App.Services.Products
 {
-    public class ProductService(IProductRepository productRepository,IUnitOfWork unitOfWork):IProductService
+    public class ProductService(IProductRepository productRepository,IUnitOfWork unitOfWork,IValidator<CreateProductRequest> createProductRequestValidator):IProductService
     {
        public async Task<ServiceResult<List<ProductDto>>> GetTopPriceProductsAsync(int count)
         {
@@ -49,14 +50,19 @@ namespace App.Services.Products
 
       public async Task<ServiceResult<CreateProductResponse>> CreateAsync(CreateProductRequest request)
         {
-            //way 2: async validation
+            //way 2: async validation manuel service business check
             //aynı isimli ürün var mı yok mu kontrolü
-            var anyProduct =await productRepository.Where(x => x.Name == request.Name).AnyAsync();
-            if(anyProduct)
-            {
-                return ServiceResult<CreateProductResponse>.Fail("This product name already exists in the database.", HttpStatusCode.BadRequest);
+            //var anyProduct =await productRepository.Where(x => x.Name == request.Name).AnyAsync();
+            //if(anyProduct)
+            //{
+              //  return ServiceResult<CreateProductResponse>.Fail("This product name already exists in the database.", HttpStatusCode.BadRequest);
+            //}
+            //way 3 fluent validation business check
+            var validationResult=await createProductRequestValidator.ValidateAsync(request);
+            if (!validationResult.IsValid) {
+            return ServiceResult<CreateProductResponse>.Fail(validationResult.Errors.Select(e => e.ErrorMessage).ToList(), HttpStatusCode.BadRequest);
             }
-
+            //way 3 end
             var product= new Product
             {
                 Name = request.Name,
