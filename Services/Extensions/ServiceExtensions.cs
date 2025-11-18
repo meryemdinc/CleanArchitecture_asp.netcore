@@ -16,6 +16,9 @@ namespace App.Services.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
           services.AddScoped<IProductService, ProductService>();
+
+         
+
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             return services;
         }
