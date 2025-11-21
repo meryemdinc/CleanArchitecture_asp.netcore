@@ -22,7 +22,7 @@ namespace App.API.Controllers
         
         [HttpPatch("stock")] //swagger'da gözüksün diye buraya stock yazdık,stock'u güncelleyeceğiz.
 
-        public async Task<IActionResult> UpdateStock(UpdateProductStockRequest request) => CreateActionResult(await productService.UpdateStockAsync(request));
+        public async Task<IActionResult> UpdateStockAsync(UpdateProductStockRequest request) => CreateActionResult(await productService.UpdateStockAsync(request));
 
 
         [HttpDelete("{id:int}")]
