@@ -52,16 +52,16 @@ namespace App.Services.Products
         {
             //way 2: async validation manuel service business check
             //aynı isimli ürün var mı yok mu kontrolü
-            //var anyProduct =await productRepository.Where(x => x.Name == request.Name).AnyAsync();
-            //if(anyProduct)
-            //{
-              //  return ServiceResult<CreateProductResponse>.Fail("This product name already exists in the database.", HttpStatusCode.BadRequest);
-            //}
-            //way 3 fluent validation business check
-            var validationResult=await createProductRequestValidator.ValidateAsync(request);
-            if (!validationResult.IsValid) {
-            return ServiceResult<CreateProductResponse>.Fail(validationResult.Errors.Select(e => e.ErrorMessage).ToList(), HttpStatusCode.BadRequest);
+            var anyProduct =await productRepository.Where(x => x.Name == request.Name).AnyAsync();
+            if(anyProduct)
+            {
+                return ServiceResult<CreateProductResponse>.Fail("This product name already exists in the database.", HttpStatusCode.BadRequest);
             }
+            //way 3 fluent validation business check
+            //var validationResult=await createProductRequestValidator.ValidateAsync(request);
+           // if (!validationResult.IsValid) {
+         //   return ServiceResult<CreateProductResponse>.Fail(validationResult.Errors.Select(e => e.ErrorMessage).ToList(), HttpStatusCode.BadRequest);
+          //  }
             //way 3 end
             var product= new Product
             {
