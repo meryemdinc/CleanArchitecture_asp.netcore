@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using App.Services;
 
+
 namespace App.API
 {
     public class Program
@@ -17,10 +18,10 @@ namespace App.API
             // Add services to the container.
 
             // Validatorlarını ekle
-            //  builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+             builder.Services.AddValidatorsFromAssemblyContaining<Program>();
             builder.Services.AddControllers(
                 options =>{
-                    options.Filters.Add<FluentValidationFilter>();
+                    options.Filters.Add<FluentValidationFilter>();//scope lifetime ı var
                     options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true; //null kontrolünü .net default olarak yapmasın diye
 
 
@@ -32,7 +33,7 @@ namespace App.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddRepositories(builder.Configuration).AddServices(builder.Configuration);
-
+    
             var app = builder.Build();
 
      /*       app.MapPost("/register", (UserDto user, IValidator<UserDto> validator) =>
