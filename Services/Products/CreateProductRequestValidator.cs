@@ -13,8 +13,8 @@ namespace App.Services.Products
             _productRepository = productRepository;
             RuleFor(x => x.Name)
                .NotEmpty().WithMessage("Product name is required.")
-              .Length(3, 10).WithMessage("The product name must be between 3 and 10 characters.")
-               .MustAsync(MustUniqueProductNameAsync).WithMessage("This product name already exists in the database.");
+              .Length(3, 10).WithMessage("The product name must be between 3 and 10 characters.");
+            //   .MustAsync(MustUniqueProductNameAsync).WithMessage("This product name already exists in the database.");
             //  .Must(MustUniqueProductName).WithMessage("This product name already exists in the database.");
             //NotEmpty checks if the string is not null or empty
             //NotNull checks if the string is not null
@@ -29,10 +29,10 @@ namespace App.Services.Products
 
 
         }
-        private async Task<bool> MustUniqueProductNameAsync(string name, CancellationToken cancellationToken)
-        {
-            return !await _productRepository.Where(x => x.Name == name).AnyAsync(cancellationToken);
-        }
+        //private async Task<bool> MustUniqueProductNameAsync(string name, CancellationToken cancellationToken)
+        //{
+        //    return !await _productRepository.Where(x => x.Name == name).AnyAsync(cancellationToken);
+      //  }
 
         //way 1: sync validation
         // private bool MustUniqueProductName(string name)
