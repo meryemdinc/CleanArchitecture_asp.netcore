@@ -5,9 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using App.Services.Products;
 using FluentValidation;
 using System.Reflection;
-using Microsoft.AspNetCore.Identity;
 
-using System.Reflection;
 
 
 namespace App.Services.Extensions
@@ -17,9 +15,9 @@ namespace App.Services.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
           services.AddScoped<IProductService, ProductService>();
-
-
+            services.AddAutoMapper(new[] { Assembly.GetExecutingAssembly() });
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+         
             return services;
         }
     }
