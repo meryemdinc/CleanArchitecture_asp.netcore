@@ -1,17 +1,23 @@
 ﻿using App.Repositories;
 using App.Repositories.Products;
+using App.Services.Products.Create;
+using App.Services.Products.Update;
+using AutoMapper;
 using FluentValidation;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
+
 namespace App.Services.Products
 {
-    public class ProductService(IProductRepository productRepository,IUnitOfWork unitOfWork,IValidator<CreateProductRequest> createProductRequestValidator):IProductService
+    public class ProductService(IProductRepository productRepository,IUnitOfWork unitOfWork,IValidator<CreateProductRequest> createProductRequestValidator,IMapper mapper):IProductService
     {
        public async Task<ServiceResult<List<ProductDto>>> GetTopPriceProductsAsync(int count)
         {
             var products = await productRepository.GetTopPriceProductsAsync(count);
+            //manuel mapping
             var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price, p.Stock)).ToList();
+
+     
 
             return new ServiceResult<List<ProductDto>>()
             {
@@ -21,8 +27,9 @@ namespace App.Services.Products
         public async Task<ServiceResult<List<ProductDto>>> GetAllListAsync()
         {
             var products = await productRepository.GetAll().ToListAsync();
-            var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price, p.Stock)).ToList();
-         return ServiceResult<List<ProductDto>>.Success(productsAsDto);
+            var productsAsDto = mapper.Map<List<ProductDto>>(products);
+            //var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price, p.Stock)).ToList();
+            return ServiceResult<List<ProductDto>>.Success(productsAsDto);
         }
 
         public async Task<ServiceResult<List<ProductDto>>> GetPagedAllListAsync(int pageNumber,int pageSize)
@@ -31,8 +38,13 @@ namespace App.Services.Products
             // 3-10 => üçüncü on kayıt skip(20) take(10)
             // n-10 => n'inci on kayıt skip((n-1)*10) take(10)
 
+            
             var products = await productRepository.GetAll().Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-            var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price, p.Stock)).ToList();
+          
+            //manuel mapping
+            //  var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price, p.Stock)).ToList();
+            
+            var productsAsDto=mapper.Map<List<ProductDto>>(products);   
             return ServiceResult<List<ProductDto>>.Success(productsAsDto);
 
         }
@@ -42,9 +54,10 @@ namespace App.Services.Products
             var product = await productRepository.GetByIdAsync(id);
             if (product is null)
             {
-              return  ServiceResult<ProductDto>.Fail("Product not found", HttpStatusCode.NotFound);
+              return  ServiceResult<ProductDto?>.Fail("Product not found", HttpStatusCode.NotFound);
             }
-            var productAsDto=new ProductDto(product!.Id, product.Name, product.Price, product.Stock);
+            var productAsDto = mapper.Map<ProductDto>(product);
+            //  var productAsDto=new ProductDto(product!.Id, product.Name, product.Price, product.Stock);
             return ServiceResult<ProductDto>.Success(productAsDto)!;
         }
 
