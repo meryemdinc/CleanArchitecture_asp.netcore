@@ -1,0 +1,412 @@
+[33mcommit e8767a0fa00b1ca1da204d884323283c74049257[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mstruct_of_efcore[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:22:01 2025 +0300
+
+    feat(API): add ProductsController.cs to handle requests and responses, and handle HTTP methods properly
+
+[33mcommit 2c1a1ba676ba80994d1e268a1916a2ae285da2b0[m[33m ([m[1;31morigin/struct_of_efcore[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:11:53 2025 +0300
+
+    feat(solution): remove unused WeatherForecastController.cs andController file
+
+[33mcommit d0e8901721ef019745b37c1e0aa1a9871a7f4ff7[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:08:47 2025 +0300
+
+    feat(service): implement generic and non-generic ServiceResult pattern
+
+[33mcommit fcaae1947540b8bfef08c004de72f905c38879c3[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:07:28 2025 +0300
+
+    feat(products): add UpdateProductRequest record
+
+[33mcommit 92ae6583a3b3548d847cbeb02c0769cd3d66ce25[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:05:57 2025 +0300
+
+    feat(solution): add Visual Studio solution and projects
+
+[33mcommit 831bff4258707fae422caad4100dd5d555bb57ef[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:49:57 2025 +0300
+
+    feat(services): add CreateProductResponse record to return created product ID
+
+[33mcommit 9f5df4c5b9db1268a44c1e396c9685d1f4b1692a[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:48:20 2025 +0300
+
+    feat(services): add CreateProductRequest record for product creation requests
+
+[33mcommit bf03c3ff2a72509445aeda3d61e1f0d96e32034a[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:46:07 2025 +0300
+
+    feat(services): register ProductService with IProductService in dependency injection container
+
+[33mcommit ed3d7da31eca61c853ba1085cf1b187f2065c55d[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:44:26 2025 +0300
+
+    feat(services): use struct instead of class for ServiceAssembly to optimize memory usage
+
+[33mcommit 9c6f1317467677a4f75f8c98c71687e5feb0a06f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Wed Oct 15 23:32:34 2025 +0300
+
+    feat(services): add ProductDto record with primary constructor
+
+[33mcommit 268602762736995159fe6b97a06d63cdee9a369a[m
+Merge: 14d23e3 cdd3a5a
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 17:44:05 2025 +0300
+
+    Merge branch 'feature/service-layer' into struct_of_efcoreMerge branch 'feature/service-layer' into struct_of_efcore
+    Merge branch 'feature/service-layer' into struct_of_efcore:wq:wq# Please enter a commit message to explain why this merge is necessary,
+    :wq# especially if it merges an updated upstream into a topic branch.
+
+[33mcommit cdd3a5ad93a5e77d3111a526105ed9cff78e1383[m[33m ([m[1;31morigin/feature/service-layer[m[33m, [m[1;32mfeature/service-layer[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 17:10:09 2025 +0300
+
+    feat(services): add IProductService interface with CRUD method definitions
+
+[33mcommit 678684e583aa8259899e907f1e01e80dd90d6c99[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 16:49:41 2025 +0300
+
+    feat(services): add ProductService with CRUD operations and DTO mapping
+
+[33mcommit 14d23e36e38e93b7828fa251293908a8880dc861[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 16:47:16 2025 +0300
+
+    feat(services): add Web API project file with reference to Repositories project
+
+[33mcommit fbae350250caf2f6bb2b66331c4fd315f7f31ead[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 16:45:23 2025 +0300
+
+    feat(repositories): add project file with .NET 8 and EF Core PostgreSQL setup
+
+[33mcommit 8dc34c4fc7376e026be193db3c7e06bc12e920f1[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 23:06:08 2025 +0300
+
+    chore(repositories): remove unnecessary using directives
+
+[33mcommit af9b42e0f596d8211a36e4829b3f22913878ab80[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 23:04:58 2025 +0300
+
+    chore(repositories): remove unnecessary using directives
+
+[33mcommit ed0fd299c713d04bcdfeaa3f391da242af0997aa[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 23:02:47 2025 +0300
+
+    feat(repositories): add IUnitOfWork interface
+
+[33mcommit 0e9561f97d3ef6bb7353bcaee2cbb662ae719e0f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:59:53 2025 +0300
+
+    feat(repositories): add UnitOfWork implementation for centralized transaction handling
+
+[33mcommit df95da4f440d36cbdb89c3fe9f641ec3af34c1b9[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:56:00 2025 +0300
+
+    chore(repositories): add RepositoryAssembly marker struct
+
+[33mcommit 589ccd1bcfa089d6ea795ff66271f6f8340bd4e2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:52:37 2025 +0300
+
+    feat(repositories): add IProductRepository interface
+
+[33mcommit e7176fb8c85352ed5a7c84de4f8c30f7e57ff339[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:51:06 2025 +0300
+
+    feat(repositories): add ProductRepository with GetTopPriceProductsAsync method
+
+[33mcommit 928616fa7f069253104871fcad6a3aca3b91391f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:45:34 2025 +0300
+
+    feat(repositories): add IGenericRepository interface
+
+[33mcommit fc9039870747e2c1f10a6c45d80c3e8693cecf6f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:43:48 2025 +0300
+
+    feat(repositories): add GenericRepository implementation for common data operations
+
+[33mcommit 28f4c705589503174bf3db361efd09911d69c068[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:40:37 2025 +0300
+
+    feat(repositories): add ProductConfiguration for entity mapping
+
+[33mcommit 8008f846927ba9e7d614d41bfd22088fb1f0742f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:37:26 2025 +0300
+
+    feat(repositories): add ConnectionStringOption class for database configuration
+
+[33mcommit 754286359915bee5cc368d020413f5948fc1bbb2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:34:47 2025 +0300
+
+    feat(repositories): add RepositoryExtensions for dependency injection setup
+
+[33mcommit 5c88c01b271446727c4f6653cd3fcd29fcdc891e[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:32:02 2025 +0300
+
+    feat(data): add AppDbContext with Product DbSet and configuration setup
+
+[33mcommit 6ee0569154db85049c1aef98fa80ff9f99cbd851[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:28:32 2025 +0300
+
+    feat(repositories): create Product entity class
+
+[33mcommit 8854e50b1dd9b6ded81ee645fedca2e82eca76d2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:52:31 2025 +0300
+
+    feat: add migration for App.API database
+
+[33mcommit 7a4a4cac55d68f2b56cb5b928ebbdb4723194c36[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:46:36 2025 +0300
+
+    feat: add migration for App.API database
+
+[33mcommit 2ac7f9ef253980c5ab9f24c413a8dd142dbbbee2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:42:22 2025 +0300
+
+    feat(migrstion) : created
+
+[33mcommit 14ba3d37e6b18aff918f70884bc954f2c6e2d12f[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:39:19 2025 +0300
+
+    Add .gitignore
+
+[33mcommit 5ccac1bb4bd08a8f464d74cd83ba665cd821c1b5[m[33m ([m[1;32mdevelop[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 9 23:35:00 2025 +0300
+
+    created
+[33mcommit e8767a0fa00b1ca1da204d884323283c74049257[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mstruct_of_efcore[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:22:01 2025 +0300
+
+    feat(API): add ProductsController.cs to handle requests and responses, and handle HTTP methods properly
+
+[33mcommit 2c1a1ba676ba80994d1e268a1916a2ae285da2b0[m[33m ([m[1;31morigin/struct_of_efcore[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:11:53 2025 +0300
+
+    feat(solution): remove unused WeatherForecastController.cs andController file
+
+[33mcommit d0e8901721ef019745b37c1e0aa1a9871a7f4ff7[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:08:47 2025 +0300
+
+    feat(service): implement generic and non-generic ServiceResult pattern
+
+[33mcommit fcaae1947540b8bfef08c004de72f905c38879c3[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:07:28 2025 +0300
+
+    feat(products): add UpdateProductRequest record
+
+[33mcommit 92ae6583a3b3548d847cbeb02c0769cd3d66ce25[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 18 19:05:57 2025 +0300
+
+    feat(solution): add Visual Studio solution and projects
+
+[33mcommit 831bff4258707fae422caad4100dd5d555bb57ef[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:49:57 2025 +0300
+
+    feat(services): add CreateProductResponse record to return created product ID
+
+[33mcommit 9f5df4c5b9db1268a44c1e396c9685d1f4b1692a[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:48:20 2025 +0300
+
+    feat(services): add CreateProductRequest record for product creation requests
+
+[33mcommit bf03c3ff2a72509445aeda3d61e1f0d96e32034a[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:46:07 2025 +0300
+
+    feat(services): register ProductService with IProductService in dependency injection container
+
+[33mcommit ed3d7da31eca61c853ba1085cf1b187f2065c55d[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 16 22:44:26 2025 +0300
+
+    feat(services): use struct instead of class for ServiceAssembly to optimize memory usage
+
+[33mcommit 9c6f1317467677a4f75f8c98c71687e5feb0a06f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Wed Oct 15 23:32:34 2025 +0300
+
+    feat(services): add ProductDto record with primary constructor
+
+[33mcommit 268602762736995159fe6b97a06d63cdee9a369a[m
+Merge: 14d23e3 cdd3a5a
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 17:44:05 2025 +0300
+
+    Merge branch 'feature/service-layer' into struct_of_efcoreMerge branch 'feature/service-layer' into struct_of_efcore
+    Merge branch 'feature/service-layer' into struct_of_efcore:wq:wq# Please enter a commit message to explain why this merge is necessary,
+    :wq# especially if it merges an updated upstream into a topic branch.
+
+[33mcommit cdd3a5ad93a5e77d3111a526105ed9cff78e1383[m[33m ([m[1;31morigin/feature/service-layer[m[33m, [m[1;32mfeature/service-layer[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 17:10:09 2025 +0300
+
+    feat(services): add IProductService interface with CRUD method definitions
+
+[33mcommit 678684e583aa8259899e907f1e01e80dd90d6c99[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 16:49:41 2025 +0300
+
+    feat(services): add ProductService with CRUD operations and DTO mapping
+
+[33mcommit 14d23e36e38e93b7828fa251293908a8880dc861[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 16:47:16 2025 +0300
+
+    feat(services): add Web API project file with reference to Repositories project
+
+[33mcommit fbae350250caf2f6bb2b66331c4fd315f7f31ead[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Mon Oct 13 16:45:23 2025 +0300
+
+    feat(repositories): add project file with .NET 8 and EF Core PostgreSQL setup
+
+[33mcommit 8dc34c4fc7376e026be193db3c7e06bc12e920f1[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 23:06:08 2025 +0300
+
+    chore(repositories): remove unnecessary using directives
+
+[33mcommit af9b42e0f596d8211a36e4829b3f22913878ab80[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 23:04:58 2025 +0300
+
+    chore(repositories): remove unnecessary using directives
+
+[33mcommit ed0fd299c713d04bcdfeaa3f391da242af0997aa[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 23:02:47 2025 +0300
+
+    feat(repositories): add IUnitOfWork interface
+
+[33mcommit 0e9561f97d3ef6bb7353bcaee2cbb662ae719e0f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:59:53 2025 +0300
+
+    feat(repositories): add UnitOfWork implementation for centralized transaction handling
+
+[33mcommit df95da4f440d36cbdb89c3fe9f641ec3af34c1b9[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:56:00 2025 +0300
+
+    chore(repositories): add RepositoryAssembly marker struct
+
+[33mcommit 589ccd1bcfa089d6ea795ff66271f6f8340bd4e2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:52:37 2025 +0300
+
+    feat(repositories): add IProductRepository interface
+
+[33mcommit e7176fb8c85352ed5a7c84de4f8c30f7e57ff339[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:51:06 2025 +0300
+
+    feat(repositories): add ProductRepository with GetTopPriceProductsAsync method
+
+[33mcommit 928616fa7f069253104871fcad6a3aca3b91391f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:45:34 2025 +0300
+
+    feat(repositories): add IGenericRepository interface
+
+[33mcommit fc9039870747e2c1f10a6c45d80c3e8693cecf6f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sun Oct 12 22:43:48 2025 +0300
+
+    feat(repositories): add GenericRepository implementation for common data operations
+
+[33mcommit 28f4c705589503174bf3db361efd09911d69c068[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:40:37 2025 +0300
+
+    feat(repositories): add ProductConfiguration for entity mapping
+
+[33mcommit 8008f846927ba9e7d614d41bfd22088fb1f0742f[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:37:26 2025 +0300
+
+    feat(repositories): add ConnectionStringOption class for database configuration
+
+[33mcommit 754286359915bee5cc368d020413f5948fc1bbb2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:34:47 2025 +0300
+
+    feat(repositories): add RepositoryExtensions for dependency injection setup
+
+[33mcommit 5c88c01b271446727c4f6653cd3fcd29fcdc891e[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:32:02 2025 +0300
+
+    feat(data): add AppDbContext with Product DbSet and configuration setup
+
+[33mcommit 6ee0569154db85049c1aef98fa80ff9f99cbd851[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Sat Oct 11 23:28:32 2025 +0300
+
+    feat(repositories): create Product entity class
+
+[33mcommit 8854e50b1dd9b6ded81ee645fedca2e82eca76d2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:52:31 2025 +0300
+
+    feat: add migration for App.API database
+
+[33mcommit 7a4a4cac55d68f2b56cb5b928ebbdb4723194c36[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:46:36 2025 +0300
+
+    feat: add migration for App.API database
+
+[33mcommit 2ac7f9ef253980c5ab9f24c413a8dd142dbbbee2[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:42:22 2025 +0300
+
+    feat(migrstion) : created
+
+[33mcommit 14ba3d37e6b18aff918f70884bc954f2c6e2d12f[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Fri Oct 10 23:39:19 2025 +0300
+
+    Add .gitignore
+
+[33mcommit 5ccac1bb4bd08a8f464d74cd83ba665cd821c1b5[m[33m ([m[1;32mdevelop[m[33m)[m
+Author: meryemdinc <meryemdinc45@gmail.com>
+Date:   Thu Oct 9 23:35:00 2025 +0300
+
+    created
